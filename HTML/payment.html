@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../images/logo/logo.jpg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <title>UTHTECH</title>
+  </head>
+  <body style="height: 100vh">
+    <!-- header -->
+    <header class="sticky">
+      <div class="logo">
+        <a href="../index.html"
+          ><img src="../images/logo/logo.jpg" alt="lỗi"
+        /></a>
+      </div>
+      <div class="apple-devices">
+        <li><a href="./cartegory.html">iPhone</a></li>
+        <li><a href="">iPad</a></li>
+        <li><a href="">Mac</a></li>
+        <li><a href="">Watch</a></li>
+        <li><a href="">Dịch vụ</a></li>
+        <li><a href="">Tin tức</a></li>
+      </div>
+      <div class="others">
+        <li>
+          <input placeholder="Tìm kiếm" type="text" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </li>
+        <li><i class="fa-solid fa-cart-shopping"></i></li>
+        <li><i class="fa-solid fa-user"></i></li>
+      </div>
+    </header>
+    <!-- payment -->
+    <div class="back-index">
+      <a href="../index.html"
+        ><div><i class="fa-solid fa-arrow-left"></i>Về trang chủ</div></a
+      >
+    </div>
+    <div class="payment">
+      <div class="delivery-method">
+        <div class="payment-method">Phương thức giao hàng</div>
+        <input type="radio" checked name="delivery-method" />Giao hàng chuyển
+        phát nhanh
+      </div>
+      <div class="payment-method">Phương thức thanh toán</div>
+      <div>
+        Mọi giao dịch đều được mã hóa. Thông tin thẻ tín dụng sẽ không bao giờ
+        được lưu lại
+      </div>
+      <div class="payment-row">
+        <input type="radio" name="payment" />Thanh toán bằng thẻ tín
+        dụng(OnePay)
+        <div><img src="../images/ATM/Onepay.jpg" alt="" /></div>
+      </div>
+      <div class="payment-row">
+        <input type="radio" name="payment" />Thanh toán qua Momo
+        <div><img src="../images/ATM/momo.jpg" alt="" /></div>
+      </div>
+      <div class="payment-row">
+        <input type="radio" name="payment" />Thanh toán qua VNPAY
+        <div><img src="../images/ATM/VNPAY.jpg" alt="" /></div>
+      </div>
+      <div class="payment-row">
+        <input type="radio" name="payment" />Thanh toán bằng tiền mặt
+        <div><img src="../images/ATM/tienmat.jpg" alt="" /></div>
+      </div>
+
+      <div class="payment-row">
+        <div class="payment-method">Nhập mã giảm giá :</div>
+        <input type="text" name="nhapma" id="text" />
+      </div>
+      <button class="btn">Tiến hành thanh toán</button>
+    </div>
+  </body>
+  <script src="../JS/script.js"></script>
+</html>
