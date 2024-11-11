@@ -11,8 +11,8 @@
           <li>
             <a href="#">Loai sản phẩm</a>
             <ul>
-              <li><a href="">Thêm loại sản phẩm</a></li>
-              <li><a href="">Danh loại sản phẩm</a></li>
+              <li><a href="./brandadd.php">Thêm loại sản phẩm</a></li>
+              <li><a href="./brandlist.php">Danh loại sản phẩm</a></li>
             </ul>
           </li>
           <li>
