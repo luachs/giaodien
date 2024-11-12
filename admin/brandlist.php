@@ -10,13 +10,13 @@ $show_brand = $brand->show_brand();
 ?>
 <div class="admin-content-right">
 <div class="admin-content-right-cartegory__list">
-          <h1>Danh sách danh mục</h1>
+          <h1>Danh loại sản phẩm</h1>
           <table>
             <tr>
               <th>STT</th>
               <th>ID</th>
-              <th>Cartegory_id</th>
-              <th>Danh mục</th>
+              <th>Tên danh mục</th>
+              <th>Danh loại sản phẩm</th>
               <th>Tùy biến</th>
             </tr>
             <?php

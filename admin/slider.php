@@ -18,7 +18,7 @@
           <li>
             <a href="#">Sản phẩm</a>
             <ul>
-              <li><a href="">Thêm sản phẩm</a></li>
+              <li><a href="./productadd.php">Thêm sản phẩm</a></li>
               <li><a href="">Danh sách sản phẩm</a></li>
             </ul>
           </li>
