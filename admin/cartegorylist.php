@@ -35,6 +35,7 @@ $show_cartegory = $cartegory->show_cartegory();
               }
             ?>
           </table>
+          <a href="./cartegoryadd.php"><button>Thêm danh mục</button></a>
         </div>
       </div>
     </section>

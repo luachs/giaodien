@@ -2,11 +2,11 @@
 <?php
 include "header.php";
 include "slider.php";
-include "../class/brand_class.php"
+include "../class/product_class.php"
 ?>
 <?php 
-$brand = new brand;
-$show_brand = $brand->show_brand();
+$product = new product;
+$show_product = $product->show_product();
 ?>
 <div class="admin-content-right">
 <div class="admin-content-right-cartegory__list">
@@ -14,31 +14,37 @@ $show_brand = $brand->show_brand();
           <table>
             <tr>
               <th>STT</th>
-              <th>ID loại sản phẩm</th>
+              <th>ID Sản phẩm</th>
               <th>Tên danh mục</th>
               <th>Tên loại sản phẩm</th>
+              <th>Tên sản phẩm</th>
+              <th>Giá sản phẩm</th>
+              <th>Giá khuyến mãi</th>
               <th>Tùy biến</th>
             </tr>
             <?php
-            if($show_brand){
+            if($show_product){
               $i = 0;
-              while($result = $show_brand->fetch_assoc()){
+              while($result = $show_product->fetch_assoc()){
                 $i++;
             ?>
             <tr>
               <td><?php echo $i;  ?></td>
-              <td><?php echo $result['brand_id'];  ?></td>
+              <td><?php echo $result['product_id'];  ?></td>
               <td><?php echo $result['cartegory_name'];  ?></td>
               <td><?php echo $result['brand_name'];  ?></td>
-              <td><a href="brandedit.php?brand_id=<?php echo $result['brand_id'];  ?>">Sửa</a>|
-              <a href="branddelete.php?brand_id=<?php echo $result['brand_id'];  ?>">Xóa</a></td>
+              <td><?php echo $result['product_name'];  ?></td>
+              <td><?php echo $result['product_price'];  ?></td>
+              <td><?php echo $result['product_price_new'];  ?></td>
+              
+              <td><a href="productdelete.php?product_id=<?php echo $result['product_id'];  ?>">Xóa</a></td>
             </tr>
             <?php
                }
               }
             ?>
           </table>
-          <a href="./brandadd.php"><button>Thêm loại sản phẩm</button></a>
+          <a href="./productadd.php"><button>Thêm sản phẩm</button></a>
         </div>
       </div>
     </section>

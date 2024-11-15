@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
           <h1>Thêm loại sản phẩm</h1> <br>
           <form action="" method="POST">
             <select name="cartegory_id" id="">
-                <option value="#">--Chọn danh mục</option>
+                <option value="#">--Chọn loại sản phẩm</option>
                 <?php 
                 $show_cartegory = $brand->show_cartegory();
                 if($show_cartegory){

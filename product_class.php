@@ -1,7 +1,5 @@
-
 <?php
-
-include "../admin/database.php";
+include "./admin/database.php";
 ?>
 <?php
 Class product{
@@ -93,8 +91,21 @@ Class product{
         $query = "SELECT * FROM tbl_product WHERE product_id = '$product_id' ";
         $result = $this->db->select($query);
         return $result;
-    } 
+    }
 
+     // index.php
+    //  public function add_product(){
+    //     $query = "SELECT tbl_cartegory.cartegory_name, tbl_product.*
+    //     FROM  tbl_product INNER JOIN tbl_cartegory
+    //     ON tbl_product.cartegory_id = tbl_cartegory.cartegory_id
+    //     ORDER BY tbl_cartegory.cartegory_name ASC, tbl_product.product_id DESC
+    //     LIMIT 4
+    //     ";
+    //     $result = $this->db->select($query);
+    //     return $result;
+    // }
+    
+   
 }
 
 ?>
