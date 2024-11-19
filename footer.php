@@ -79,4 +79,5 @@
   </body>
   <script src="./slider.js"></script>
   <script src="./JS/script.js"></script>
+  <script src="./JS/product.js"></script>
 </html>

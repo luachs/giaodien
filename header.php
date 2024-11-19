@@ -25,14 +25,18 @@ $show_cartegory = $cartegory->show_cartegory();
     <!-- header -->
     <header class="sticky">
       <div class="logo">
-        <img src="./images/logo/logo.jpg" alt="lỗi" />
+        <a href="./index.php"><img src="./images/logo/logo.jpg" alt="lỗi" /></a>
       </div>
       <div class="apple-devices">
       <?php
             if($show_cartegory){
               while($result = $show_cartegory->fetch_assoc()){
         ?>
-        <li><a href="./HTML/cartegory.html"><?php echo $result['cartegory_name'];  ?></a></li>
+        <li>
+          <a href="cartegory.php?cartegory_id=<?php echo $result['cartegory_id']; ?>">
+          <?php echo $result['cartegory_name'];  ?>
+          </a>
+      </li>
 
         <?php
                }

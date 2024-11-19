@@ -1,5 +1,5 @@
 <?php
-include "./admin/database.php";
+include_once "./admin/database.php";
 ?>
 <?php
 Class product{
@@ -94,18 +94,44 @@ Class product{
     }
 
      // index.php
-    //  public function add_product(){
-    //     $query = "SELECT tbl_cartegory.cartegory_name, tbl_product.*
-    //     FROM  tbl_product INNER JOIN tbl_cartegory
-    //     ON tbl_product.cartegory_id = tbl_cartegory.cartegory_id
-    //     ORDER BY tbl_cartegory.cartegory_name ASC, tbl_product.product_id DESC
-    //     LIMIT 4
-    //     ";
-    //     $result = $this->db->select($query);
-    //     return $result;
-    // }
+    public function get_products_by_cartegory($cartegory_id) {
+        $query = "SELECT * FROM tbl_product 
+                  WHERE cartegory_id = '$cartegory_id' 
+                  ORDER BY tbl_product.product_id DESC LIMIT 4";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    public function get_all_cartegories(){
+        $query = "SELECT *
+              FROM tbl_cartegory
+              INNER JOIN tbl_brand 
+              ON tbl_cartegory.cartegory_id = tbl_brand.cartegory_id
+              GROUP BY tbl_cartegory.cartegory_id
+              ORDER BY tbl_cartegory.cartegory_id ASC";
+        $result = $this->db->select($query); 
+        return $result; 
+    }
     
-   
+
+   public function show_brand_cart($cartegory_id){
+    $query = "SELECT * FROM tbl_brand 
+    WHERE cartegory_id = '$cartegory_id'
+    ORDER BY brand_id DESC";
+     $result = $this->db->select($query); 
+     return $result;
+   }
+   public function show_cartegory_name($cartegory_id){
+    $query = "SELECT * FROM tbl_cartegory
+    WHERE cartegory_id = '$cartegory_id'";
+     $result = $this->db->select($query); 
+     return $result;
+   }
+   public function show_product_by_productID($product_id ){
+    $query ="SELECT * FROM tbl_product
+    WHERE product_id ='$product_id '";
+     $result = $this->db->select($query); 
+     return $result;
+   }
 }
 
 ?>

@@ -30,8 +30,8 @@ Class product{
         $product_price_new = $_POST['product_price_new'];
         $product_desc = $_POST['product_desc'];
         $product_img = $_FILES['product_img']['name'];
-        $upload_dir = "/Applications/XAMPP/xamppfiles/htdocs/du_an_lon/admin/uploads/";
-        move_uploaded_file($_FILES['product_img']['tmp_name'], $upload_dir . $_FILES['product_img']['name']);
+        $upload_dir = dirname(__FILE__) . "/../admin/uploads/";
+        move_uploaded_file($_FILES['product_img']['tmp_name'], $upload_dir . $product_img);
 
 
 
@@ -60,7 +60,6 @@ Class product{
             $filetmp = $_FILES['product_img_desc']['tmp_name'];
 
             foreach($filename as $key => $value){
-                $upload_dir = "/Applications/XAMPP/xamppfiles/htdocs/du_an_lon/admin/uploads/";
                 move_uploaded_file($filetmp[$key], $upload_dir .$value);
         
         
